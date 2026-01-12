@@ -17,9 +17,9 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
     <div className="bg-offWhite">
       <Hero onNavigate={onNavigate} />
       
-      {/* Container with moderated negative margin and higher z-index safety */}
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 -mt-12 md:-mt-20 lg:-mt-32 relative z-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-10">
+      {/* Container - Removed negative margin so boxes sit on the white background */}
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-16 md:py-24 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12">
           <CTAButton 
             title="Plan Your Visit" 
             desc="What to expect when you arrive in Chilobwe." 
