@@ -1,19 +1,18 @@
 
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import PlanYourVisit from './components/PlanYourVisit';
-import SermonArchive from './components/SermonArchive';
-import Giving from './components/Giving';
-import PrayerRequest from './components/PrayerRequest';
-import About from './components/About';
-import Footer from './components/Footer';
-import { PageId } from './types';
+import Navbar from './components/Navbar.tsx';
+import Home from './components/Home.tsx';
+import PlanYourVisit from './components/PlanYourVisit.tsx';
+import SermonArchive from './components/SermonArchive.tsx';
+import Giving from './components/Giving.tsx';
+import PrayerRequest from './components/PrayerRequest.tsx';
+import About from './components/About.tsx';
+import Footer from './components/Footer.tsx';
+import { PageId } from './types.ts';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<PageId>('home');
 
-  // Scroll to top on page change
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [currentPage]);
