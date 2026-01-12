@@ -17,8 +17,9 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
     <div className="bg-offWhite">
       <Hero onNavigate={onNavigate} />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 md:-mt-20 relative z-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+      {/* Container widened for large screens */}
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 -mt-16 md:-mt-24 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-10">
           <CTAButton 
             title="Plan Your Visit" 
             desc="What to expect when you arrive in Chilobwe." 
@@ -35,24 +36,29 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
       </div>
 
-      <BishopsCorner />
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12">
+        <BishopsCorner />
+      </div>
 
-      {/* New Here Section - Screenshot Accurate Design with Responsive Adjustments */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#1A2B48] rounded-2xl md:rounded-3xl p-6 sm:p-10 md:p-16 text-white flex flex-col lg:flex-row items-stretch gap-10 md:gap-12 overflow-hidden relative shadow-2xl border-2 border-[#5C7DAF]">
+      {/* New Here Section - Proportional scaling for ultra-wide */}
+      <section className="py-24 lg:py-40 bg-white">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="bg-[#1A2B48] rounded-[2rem] lg:rounded-[4rem] p-8 sm:p-12 md:p-24 text-white flex flex-col lg:flex-row items-center lg:items-stretch gap-12 lg:gap-24 overflow-hidden relative shadow-2xl border-2 border-[#5C7DAF]/30">
             
+            {/* Ambient Background Glow for clarity and depth */}
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gold/5 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+
             {/* Left Content Column */}
             <div className="lg:w-1/2 relative z-10 flex flex-col items-start justify-center">
-              <div className="inline-block px-6 py-2 rounded-full border border-white/20 text-white/90 text-[10px] font-bold uppercase tracking-[0.3em] mb-6 md:mb-12">
+              <div className="inline-block px-8 py-3 rounded-full border border-white/20 bg-white/5 text-white/90 text-[11px] font-bold uppercase tracking-[0.4em] mb-8 lg:mb-16">
                 WELCOME HOME
               </div>
               
-              <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-header font-bold mb-6 md:mb-10 leading-[1.1] tracking-tight">
+              <h2 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-header font-bold mb-8 lg:mb-12 leading-[1] tracking-tight">
                 New to <br className="hidden sm:block" />Overcomers?
               </h2>
               
-              <p className="text-lg md:text-xl text-white/40 mb-8 md:mb-12 leading-relaxed font-light max-w-sm">
+              <p className="text-xl lg:text-2xl text-white/50 mb-10 lg:mb-16 leading-relaxed font-light max-w-xl">
                 We know that visiting a church for the first time can be intimidating. 
                 Whether you're looking for answers to life's big questions or a community of faith, 
                 we're here to help you feel at home in Chilobwe.
@@ -60,36 +66,36 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               
               <button 
                 onClick={() => onNavigate('visit')}
-                className="bg-[#C5A059] text-white px-8 md:px-12 py-4 md:py-5 rounded-full font-bold uppercase tracking-widest text-xs md:text-sm hover:bg-[#A68546] transition-all shadow-xl transform hover:scale-105"
+                className="bg-gold text-white px-12 lg:px-16 py-5 lg:py-6 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-deepGold transition-all shadow-2xl transform hover:scale-105"
               >
                 I'M NEW HERE
               </button>
             </div>
 
-            {/* Right Visuals Column */}
-            <div className="lg:w-1/2 grid grid-cols-2 gap-4 md:gap-6 relative z-10 min-h-[300px] md:min-h-[500px]">
-              <div className="flex flex-col gap-4 md:gap-6 justify-end">
-                <div className="h-20 md:h-40 bg-[#14233D] rounded-2xl md:rounded-[2rem] w-full hidden sm:block"></div>
-                <div className="relative group">
+            {/* Right Visuals Column - Refined Grid for Sharpness */}
+            <div className="lg:w-1/2 grid grid-cols-2 gap-6 lg:gap-10 relative z-10 min-h-[400px] lg:min-h-[700px] w-full lg:w-auto">
+              <div className="flex flex-col gap-6 lg:gap-10 justify-end">
+                <div className="h-32 lg:h-60 bg-[#14233D] rounded-[2.5rem] lg:rounded-[3.5rem] w-full hidden sm:block shadow-inner"></div>
+                <div className="relative group overflow-hidden rounded-[2.5rem] lg:rounded-[3.5rem] shadow-2xl">
                   <img 
                     src={congregationImg} 
-                    className="rounded-2xl md:rounded-[2.5rem] h-48 md:h-80 w-full object-cover shadow-2xl hover:scale-105 transition-transform duration-500 border border-white/5" 
+                    className="h-60 lg:h-[450px] w-full object-cover transition-transform duration-1000 group-hover:scale-110" 
                     alt="Worship Experience" 
                   />
-                  <div className="absolute inset-0 bg-navy/20 rounded-2xl md:rounded-[2.5rem] group-hover:bg-transparent transition-colors"></div>
+                  <div className="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors"></div>
                 </div>
               </div>
 
-              <div className="flex flex-col gap-4 md:gap-6">
-                <div className="relative group flex-grow">
+              <div className="flex flex-col gap-6 lg:gap-10">
+                <div className="relative group overflow-hidden rounded-[2.5rem] lg:rounded-[3.5rem] shadow-2xl flex-grow">
                   <img 
                     src={congregationImg} 
-                    className="rounded-2xl md:rounded-[2.5rem] h-full w-full object-cover shadow-2xl hover:scale-105 transition-transform duration-500 border border-white/5" 
+                    className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110" 
                     alt="Overcomers Congregation" 
                   />
-                  <div className="absolute inset-0 bg-navy/10 rounded-2xl md:rounded-[2.5rem] group-hover:bg-transparent transition-colors"></div>
+                  <div className="absolute inset-0 bg-navy/10 group-hover:bg-transparent transition-colors"></div>
                 </div>
-                <div className="h-24 md:h-48 bg-[#14233D] rounded-2xl md:rounded-[2rem] w-full hidden sm:block"></div>
+                <div className="h-32 lg:h-60 bg-[#14233D] rounded-[2.5rem] lg:rounded-[3.5rem] w-full hidden sm:block shadow-inner"></div>
               </div>
             </div>
           </div>
@@ -97,10 +103,13 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       </section>
 
       <ServiceTimes />
-      <TestimonySection />
+      
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12">
+        <TestimonySection />
+      </div>
 
       {/* Welcome Message / Final CTA */}
-      <section className="py-20 md:py-32 relative overflow-hidden text-center text-white">
+      <section className="py-32 lg:py-56 relative overflow-hidden text-center text-white">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1514525253361-b83f859b73c0?auto=format&fit=crop&q=80&w=2000" 
@@ -110,24 +119,24 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           <div className="absolute inset-0 bg-navy/90 bg-gradient-to-br from-navy via-navy/80 to-gold/20" />
         </div>
 
-        <div className="max-w-4xl mx-auto px-4 relative z-10">
-          <h2 className="font-header text-3xl md:text-5xl text-white mb-6 md:mb-8 leading-tight">
+        <div className="max-w-5xl mx-auto px-6 relative z-10">
+          <h2 className="font-header text-4xl lg:text-7xl text-white mb-8 lg:mb-12 leading-tight">
             "Welcome Home to <br />
             <span className="text-gold italic">Overcomers Temple of God.</span>"
           </h2>
-          <p className="text-lg md:text-xl text-white/70 font-light leading-relaxed mb-10 md:mb-12 max-w-2xl mx-auto">
-            Whatever your story, whatever your past, you belong here. Join Bishop Njobvu and a community of believers in Chilobwe as we seek the face of God together. 
+          <p className="text-xl lg:text-3xl text-white/70 font-light leading-relaxed mb-12 lg:mb-20 max-w-3xl mx-auto">
+            Whatever your story, whatever your past, you belong here. Join Bishop Njobvu and a community of believers in Chilobwe. 
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 lg:gap-10 justify-center">
             <button 
               onClick={() => onNavigate('visit')}
-              className="bg-gold text-white px-8 md:px-12 py-4 md:py-5 rounded-full font-bold uppercase tracking-widest text-xs md:text-sm hover:bg-white hover:text-navy transition-all shadow-2xl"
+              className="bg-gold text-white px-12 lg:px-20 py-5 lg:py-6 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-navy transition-all shadow-2xl transform hover:scale-105"
             >
               Start Here
             </button>
             <button 
               onClick={() => onNavigate('prayer')}
-              className="bg-white/10 backdrop-blur-md text-white border-2 border-white/40 px-8 md:px-12 py-4 md:py-5 rounded-full font-bold uppercase tracking-widest text-xs md:text-sm hover:bg-white hover:text-navy transition-all shadow-xl"
+              className="bg-white/10 backdrop-blur-md text-white border-2 border-white/40 px-12 lg:px-20 py-5 lg:py-6 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-navy transition-all shadow-xl transform hover:scale-105"
             >
               Need Prayer?
             </button>
@@ -141,13 +150,16 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 const CTAButton: React.FC<{ title: string; desc: string; icon: string; onClick: () => void; highlight?: boolean }> = ({ title, desc, icon, onClick, highlight }) => (
   <button 
     onClick={onClick}
-    className={`p-6 md:p-10 rounded-2xl md:rounded-3xl shadow-2xl text-left transition-all transform hover:-translate-y-2 group border border-navy/5 relative overflow-hidden ${
+    className={`p-10 lg:p-16 rounded-[2rem] lg:rounded-[3rem] shadow-2xl text-left transition-all transform hover:-translate-y-3 group border border-navy/5 relative overflow-hidden ${
       highlight ? 'bg-gold text-white border-transparent' : 'bg-white text-navy'
     }`}
   >
-    <div className="text-4xl md:text-5xl mb-4 md:mb-6 transform group-hover:scale-110 transition-transform origin-left">{icon}</div>
-    <h3 className="text-xl md:text-2xl font-bold mb-2 font-header tracking-tight">{title}</h3>
-    <p className={`text-xs md:text-sm leading-relaxed ${highlight ? 'text-white/80' : 'text-gray-500'}`}>{desc}</p>
+    <div className="text-5xl lg:text-7xl mb-6 lg:mb-10 transform group-hover:scale-110 transition-transform origin-left">{icon}</div>
+    <h3 className="text-2xl lg:text-4xl font-bold mb-4 font-header tracking-tight">{title}</h3>
+    <p className={`text-sm lg:text-lg leading-relaxed ${highlight ? 'text-white/80' : 'text-gray-500'}`}>{desc}</p>
+    {highlight && (
+      <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+    )}
   </button>
 );
 
