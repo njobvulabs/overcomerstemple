@@ -11,6 +11,8 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = ({ onNavigate }) => {
+  const congregationImg = "https://i.imgur.com/PrAxlfc.jpg";
+
   return (
     <div className="bg-offWhite">
       <Hero onNavigate={onNavigate} />
@@ -35,55 +37,70 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
       <BishopsCorner />
 
-      {/* New Here Section with Screenshot Design */}
+      {/* New Here Section - Screenshot Accurate Design */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#1A2B48] rounded-xl p-8 md:p-16 text-white flex flex-col md:flex-row items-center gap-12 overflow-hidden relative shadow-2xl border-2 border-[#5C7DAF]">
-            {/* Background blurs for depth */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-gold/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-[100px]"></div>
+          <div className="bg-[#1A2B48] rounded-xl p-8 md:p-16 text-white flex flex-col md:flex-row items-stretch gap-12 overflow-hidden relative shadow-2xl border-2 border-[#5C7DAF]">
             
-            <div className="md:w-1/2 relative z-10">
-              <div className="inline-block px-6 py-2 rounded-full border border-white/30 text-white/80 text-[10px] font-bold uppercase tracking-[0.3em] mb-8">
-                Welcome Home
+            {/* Left Content Column */}
+            <div className="md:w-1/2 relative z-10 flex flex-col items-start justify-center">
+              <div className="inline-block px-6 py-2 rounded-full border border-white/20 text-white/90 text-[10px] font-bold uppercase tracking-[0.3em] mb-12">
+                WELCOME HOME
               </div>
-              <h2 className="text-5xl md:text-7xl font-header font-bold mb-8 leading-tight">New to <br />Overcomers?</h2>
-              <p className="text-xl text-white/50 mb-10 leading-relaxed font-light max-w-md">
+              
+              <h2 className="text-6xl md:text-8xl font-header font-bold mb-10 leading-[0.9] tracking-tight">
+                New to <br />Overcomers?
+              </h2>
+              
+              <p className="text-xl text-white/40 mb-12 leading-relaxed font-light max-w-sm">
                 We know that visiting a church for the first time can be intimidating. 
                 Whether you're looking for answers to life's big questions or a community of faith, 
                 we're here to help you feel at home in Chilobwe.
               </p>
+              
               <button 
                 onClick={() => onNavigate('visit')}
-                className="bg-[#C5A059] text-white px-10 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-[#A68546] transition-all shadow-xl transform hover:scale-105"
+                className="bg-[#C5A059] text-white px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-[#A68546] transition-all shadow-xl transform hover:scale-105"
               >
-                I'm New Here
+                I'M NEW HERE
               </button>
             </div>
 
-            <div className="md:w-1/2 grid grid-cols-2 gap-6 relative z-10">
-              {/* Image Grid with specific heights for artistic layout */}
-              <div className="space-y-6 flex flex-col justify-end">
-                <div className="h-24 bg-navy/40 rounded-3xl w-full hidden md:block"></div>
-                <img 
-                  src="https://i.imgur.com/KbcjYV2.jpg" 
-                  className="rounded-3xl h-64 w-full object-cover shadow-2xl hover:scale-105 transition-transform duration-500" 
-                  alt="Worship at Overcomers" 
-                />
-              </div>
-              <div className="space-y-6">
-                <img 
-                  src="https://i.imgur.com/oJhP77p.jpg" 
-                  className="rounded-[2.5rem] h-[350px] w-full object-cover shadow-2xl hover:scale-105 transition-transform duration-500 border-4 border-white/5" 
-                  alt="Community Fellowship" 
-                />
-                <div className="h-32 bg-navy/40 rounded-3xl w-full hidden md:block"></div>
-              </div>
+            {/* Right Visuals Column - Matches Screenshot Grid */}
+            <div className="md:w-1/2 grid grid-cols-2 gap-6 relative z-10 min-h-[500px]">
               
-              {/* Additional small images / placeholders in background if needed */}
-              <div className="hidden">
-                 <img src="https://i.imgur.com/OzISpZ2.jpg" alt="Youth Ministry" />
-                 <img src="https://i.imgur.com/R4Itv5f.jpg" alt="Prayer" />
+              {/* Left Side of the grid (Middle items) */}
+              <div className="flex flex-col gap-6 justify-end">
+                {/* Background abstract block */}
+                <div className="h-40 bg-[#14233D] rounded-[2rem] w-full hidden md:block"></div>
+                
+                {/* Lower focused image */}
+                <div className="relative group">
+                  <img 
+                    src={congregationImg} 
+                    className="rounded-[2.5rem] h-80 w-full object-cover shadow-2xl hover:scale-105 transition-transform duration-500 border border-white/5" 
+                    alt="Worship Experience" 
+                  />
+                  <div className="absolute inset-0 bg-navy/20 rounded-[2.5rem] group-hover:bg-transparent transition-colors"></div>
+                </div>
               </div>
+
+              {/* Right Side of the grid (Tall item) */}
+              <div className="flex flex-col gap-6">
+                {/* Large vertical image matching the right side of screenshot */}
+                <div className="relative group flex-grow">
+                  <img 
+                    src={congregationImg} 
+                    className="rounded-[2.5rem] h-full w-full object-cover shadow-2xl hover:scale-105 transition-transform duration-500 border border-white/5" 
+                    alt="Overcomers Congregation" 
+                  />
+                  <div className="absolute inset-0 bg-navy/10 rounded-[2.5rem] group-hover:bg-transparent transition-colors"></div>
+                </div>
+                
+                {/* Background abstract block */}
+                <div className="h-48 bg-[#14233D] rounded-[2rem] w-full hidden md:block"></div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -92,9 +109,8 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       <ServiceTimes />
       <TestimonySection />
 
-      {/* Welcome Message / Final CTA with Vibrant Image Background */}
+      {/* Welcome Message / Final CTA */}
       <section className="py-32 relative overflow-hidden text-center text-white">
-        {/* Vibrant Background Layer */}
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1514525253361-b83f859b73c0?auto=format&fit=crop&q=80&w=2000" 
