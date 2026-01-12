@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { PageId } from '../types';
+import { PageId } from '../types.ts';
 
 interface FooterProps {
   onNavigate: (page: PageId) => void;
@@ -26,7 +26,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed">
-              A Spirit-filled community committed to seeing you walk in the fullness of your divine destiny.
+              A Spirit-filled community in Chilobwe committed to seeing you walk in the fullness of your divine destiny.
             </p>
           </div>
 
@@ -35,9 +35,9 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <h4 className="text-gold font-bold uppercase tracking-widest text-sm mb-6">Quick Links</h4>
             <ul className="space-y-4">
               <li><button onClick={() => onNavigate('home')} className="text-white/60 hover:text-white transition-colors text-sm">Home</button></li>
+              <li><button onClick={() => onNavigate('about')} className="text-white/60 hover:text-white transition-colors text-sm">About Us</button></li>
               <li><button onClick={() => onNavigate('visit')} className="text-white/60 hover:text-white transition-colors text-sm">Plan Your Visit</button></li>
               <li><button onClick={() => onNavigate('sermons')} className="text-white/60 hover:text-white transition-colors text-sm">Sermons</button></li>
-              <li><button onClick={() => onNavigate('giving')} className="text-white/60 hover:text-white transition-colors text-sm">Giving</button></li>
               <li><button onClick={() => onNavigate('prayer')} className="text-white/60 hover:text-white transition-colors text-sm">Prayer Requests</button></li>
             </ul>
           </div>
@@ -47,13 +47,22 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <h4 className="text-gold font-bold uppercase tracking-widest text-sm mb-6">Contact Us</h4>
             <ul className="space-y-4 text-sm text-white/60">
               <li className="flex items-start gap-3">
-                <span className="text-gold">📍</span> Chilobwe, Blantyre, Malawi
+                <span className="text-gold">📍</span> 
+                <a href="https://www.google.com/maps/search/Chilobwe,+Blantyre" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+                  Chilobwe, Blantyre, Malawi
+                </a>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-gold">📞</span> +265 88 5829 750
+                <span className="text-gold">💬</span> 
+                <a href="https://wa.me/265885829750" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+                  +265 88 5829 750 (WhatsApp)
+                </a>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-gold">📧</span> alfrednjobvujnr@gmail.com
+                <span className="text-gold">📧</span> 
+                <a href="mailto:alfrednjobvujnr@gmail.com" className="hover:text-gold transition-colors">
+                  alfrednjobvujnr@gmail.com
+                </a>
               </li>
             </ul>
           </div>

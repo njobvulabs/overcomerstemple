@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { PageId } from '../types';
+import { PageId } from '../types.ts';
 
 interface NavbarProps {
   currentPage: PageId;
@@ -16,7 +16,6 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
     { label: 'Plan Your Visit', id: 'visit' },
     { label: 'Sermons', id: 'sermons' },
     { label: 'Prayer', id: 'prayer' },
-    { label: 'Giving', id: 'giving' },
   ];
 
   return (

@@ -4,7 +4,6 @@ import Navbar from './components/Navbar.tsx';
 import Home from './components/Home.tsx';
 import PlanYourVisit from './components/PlanYourVisit.tsx';
 import SermonArchive from './components/SermonArchive.tsx';
-import Giving from './components/Giving.tsx';
 import PrayerRequest from './components/PrayerRequest.tsx';
 import About from './components/About.tsx';
 import Footer from './components/Footer.tsx';
@@ -25,8 +24,6 @@ const App: React.FC = () => {
         return <PlanYourVisit />;
       case 'sermons':
         return <SermonArchive />;
-      case 'giving':
-        return <Giving />;
       case 'prayer':
         return <PrayerRequest />;
       case 'about':
