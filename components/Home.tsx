@@ -17,8 +17,8 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
     <div className="bg-offWhite">
       <Hero onNavigate={onNavigate} />
       
-      {/* Container widened for large screens */}
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 -mt-16 md:-mt-24 relative z-10">
+      {/* Container with moderated negative margin and higher z-index safety */}
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 -mt-12 md:-mt-20 lg:-mt-32 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-10">
           <CTAButton 
             title="Plan Your Visit" 
@@ -40,15 +40,13 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         <BishopsCorner />
       </div>
 
-      {/* New Here Section - Proportional scaling for ultra-wide */}
+      {/* New Here Section */}
       <section className="py-24 lg:py-40 bg-white">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12">
           <div className="bg-[#1A2B48] rounded-[2rem] lg:rounded-[4rem] p-8 sm:p-12 md:p-24 text-white flex flex-col lg:flex-row items-center lg:items-stretch gap-12 lg:gap-24 overflow-hidden relative shadow-2xl border-2 border-[#5C7DAF]/30">
             
-            {/* Ambient Background Glow for clarity and depth */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gold/5 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
 
-            {/* Left Content Column */}
             <div className="lg:w-1/2 relative z-10 flex flex-col items-start justify-center">
               <div className="inline-block px-8 py-3 rounded-full border border-white/20 bg-white/5 text-white/90 text-[11px] font-bold uppercase tracking-[0.4em] mb-8 lg:mb-16">
                 WELCOME HOME
@@ -72,7 +70,6 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               </button>
             </div>
 
-            {/* Right Visuals Column - Refined Grid for Sharpness */}
             <div className="lg:w-1/2 grid grid-cols-2 gap-6 lg:gap-10 relative z-10 min-h-[400px] lg:min-h-[700px] w-full lg:w-auto">
               <div className="flex flex-col gap-6 lg:gap-10 justify-end">
                 <div className="h-32 lg:h-60 bg-[#14233D] rounded-[2.5rem] lg:rounded-[3.5rem] w-full hidden sm:block shadow-inner"></div>
@@ -108,7 +105,6 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         <TestimonySection />
       </div>
 
-      {/* Welcome Message / Final CTA */}
       <section className="py-32 lg:py-56 relative overflow-hidden text-center text-white">
         <div className="absolute inset-0 z-0">
           <img 
