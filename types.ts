@@ -1,5 +1,5 @@
 
-export type PageId = 'home' | 'visit' | 'sermons' | 'prayer' | 'about';
+export type PageId = 'home' | 'visit' | 'sermons' | 'prayer' | 'about' | 'media';
 
 export interface Sermon {
   id: string;
@@ -15,4 +15,13 @@ export interface Testimony {
   name: string;
   story: string;
   date: string;
+}
+
+export interface MediaItem {
+  id: string;
+  type: 'photo' | 'video';
+  url: string;
+  thumbnail: string;
+  title: string;
+  category: string;
 }

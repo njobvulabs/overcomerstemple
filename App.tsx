@@ -6,6 +6,7 @@ import PlanYourVisit from './components/PlanYourVisit.tsx';
 import SermonArchive from './components/SermonArchive.tsx';
 import PrayerRequest from './components/PrayerRequest.tsx';
 import About from './components/About.tsx';
+import MediaGallery from './components/MediaGallery.tsx';
 import Footer from './components/Footer.tsx';
 import { PageId } from './types.ts';
 
@@ -28,6 +29,8 @@ const App: React.FC = () => {
         return <PrayerRequest />;
       case 'about':
         return <About />;
+      case 'media':
+        return <MediaGallery />;
       default:
         return <Home onNavigate={setCurrentPage} />;
     }
