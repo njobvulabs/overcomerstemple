@@ -5,8 +5,8 @@ const TestimonySection: React.FC = () => {
   const testimonies = [
     {
       id: '1',
-      name: 'Sister Mary',
-      story: 'I was facing a mountain of debt, but through the teachings of Bishop Njobvu and standing on God\'s word at Overcomers, I have witnessed a supernatural breakthrough!',
+      name: 'Sister Chisomo',
+      story: 'Nditagoyamba kupemphera ku mpingoku moyo unasintha kwambiri',
     },
     {
       id: '2',
