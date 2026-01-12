@@ -35,7 +35,7 @@ const About: React.FC = () => {
           <div className="grid grid-cols-2 gap-4">
              <div className="relative group">
                 <img 
-                  src="https://i.imgur.com/OzISpZ2.jpg" 
+                  src="https://i.imgur.com/KbcjYV2.jpg" 
                   className="rounded-2xl shadow-xl h-64 w-full object-cover transform transition-transform group-hover:scale-105" 
                   alt="Ministry Scene 1" 
                 />
