@@ -54,14 +54,14 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-gold">💬</span> 
-                <a href="https://wa.me/265885829750" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
-                  +265 88 5829 750 (WhatsApp)
+                <a href="https://wa.me/265884545324" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+                  +265 88 4545 324 (WhatsApp)
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-gold">📧</span> 
-                <a href="mailto:alfrednjobvujnr@gmail.com" className="hover:text-gold transition-colors">
-                  alfrednjobvujnr@gmail.com
+                <a href="mailto:alfrednjobvu5@gmail.com" className="hover:text-gold transition-colors">
+                  alfrednjobvu5@gmail.com
                 </a>
               </li>
             </ul>

@@ -6,7 +6,7 @@ const PrayerRequest: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate sending to alfrednjobvujnr@gmail.com
+    // Simulate sending to alfrednjobvu5@gmail.com
     setSubmitted(true);
   };
 
@@ -108,7 +108,7 @@ const PrayerRequest: React.FC = () => {
               <span>Send to Bishop Njobvu</span>
               <span className="text-2xl group-hover:rotate-12 transition-transform">🕊️</span>
             </button>
-            <p className="text-center text-gray-400 text-[10px] mt-6 uppercase tracking-widest">Sent directly to alfrednjobvujnr@gmail.com</p>
+            <p className="text-center text-gray-400 text-[10px] mt-6 uppercase tracking-widest">Sent directly to alfrednjobvu5@gmail.com</p>
           </div>
         </form>
       </div>

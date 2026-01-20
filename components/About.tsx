@@ -18,7 +18,8 @@ const About: React.FC = () => {
       </section>
 
       {/* Story & Vision */}
-      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 max-w-7x
+l mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div>
             <div className="w-12 h-1 bg-gold mb-8"></div>

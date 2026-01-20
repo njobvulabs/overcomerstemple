@@ -59,14 +59,14 @@ const PlanYourVisit: React.FC = () => {
               />
               <ContactDetail 
                 icon="💬" 
-                text="+265 88 5829 750 (WhatsApp)" 
-                href="https://wa.me/265885829750"
+                text="+265 88 4545 324 (WhatsApp)" 
+                href="https://wa.me/265884545324"
                 isExternal
               />
               <ContactDetail 
                 icon="📧" 
-                text="alfrednjobvujnr@gmail.com" 
-                href="mailto:alfrednjobvujnr@gmail.com"
+                text="alfrednjobvu5@gmail.com" 
+                href="mailto:alfrednjobvu5@gmail.com"
               />
             </div>
             <button 

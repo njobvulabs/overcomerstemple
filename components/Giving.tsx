@@ -55,13 +55,13 @@ const Giving: React.FC = () => {
             <GivingMethod 
               icon="📱"
               title="Mobile Money (Airtel/TNM)"
-              detail="+265 88 5829 750"
+              detail="+265 88 4545 324"
             />
             <GivingMethod 
               icon="🏦"
               title="Bank Transfer"
               detail="Available upon request"
-              subDetail="Email: alfrednjobvujnr@gmail.com"
+              subDetail="Email: alfrednjobvu5@gmail.com"
             />
             <GivingMethod 
               icon="🤝"
