@@ -14,6 +14,17 @@ const App: React.FC = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // SEO: Dynamic Page Titles
+    const titleMap: Record<PageId, string> = {
+      home: 'Welcome Home | Overcomers Temple of God',
+      visit: 'Plan Your Visit | Join Us in Chilobwe',
+      sermons: 'Sermon Archive | Messages of Power',
+      about: 'Our Story & Vision | About Overcomers Temple',
+      media: 'Media Gallery | Visions of Victory',
+    };
+    
+    document.title = titleMap[currentPage] || 'Overcomers Temple of God';
   }, [currentPage]);
 
   const renderPage = () => {
