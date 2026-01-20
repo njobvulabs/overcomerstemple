@@ -131,10 +131,10 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               Start Here
             </button>
             <button 
-              onClick={() => onNavigate('prayer')}
+              onClick={() => onNavigate('about')}
               className="bg-white/10 backdrop-blur-md text-white border-2 border-white/40 px-12 lg:px-20 py-5 lg:py-6 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-navy transition-all shadow-xl transform hover:scale-105"
             >
-              Need Prayer?
+              About Us
             </button>
           </div>
         </div>

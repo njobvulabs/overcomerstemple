@@ -16,7 +16,6 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
     { label: 'Plan Your Visit', id: 'visit' },
     { label: 'Sermons', id: 'sermons' },
     { label: 'Media', id: 'media' },
-    { label: 'Prayer', id: 'prayer' },
   ];
 
   return (

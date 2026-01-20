@@ -1,5 +1,5 @@
 
-export type PageId = 'home' | 'visit' | 'sermons' | 'prayer' | 'about' | 'media';
+export type PageId = 'home' | 'visit' | 'sermons' | 'about' | 'media';
 
 export interface Sermon {
   id: string;

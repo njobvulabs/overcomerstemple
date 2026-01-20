@@ -52,7 +52,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           <div className="flex flex-col sm:flex-row gap-5 lg:gap-8 justify-center items-center animate-fade-in-up delay-300">
             <button 
               onClick={() => onNavigate('visit')}
-              className="bg-gold text-white px-10 lg:px-16 py-4 lg:py-6 rounded-full font-bold uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-deepGold transition-all transform hover:scale-105 shadow-xl flex items-center justify-center gap-4 w-full sm:w-auto group"
+              className="bg-gold text-white px-10 lg:px-20 py-4 lg:py-6 rounded-full font-bold uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-deepGold transition-all transform hover:scale-105 shadow-xl flex items-center justify-center gap-4 w-full sm:w-auto group"
             >
               <span>Plan Your Visit</span>
               <svg className="w-5 h-5 lg:w-6 lg:h-6 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,10 +60,10 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               </svg>
             </button>
             <button 
-              onClick={() => onNavigate('prayer')}
-              className="bg-white/10 backdrop-blur-md border-2 border-white/30 text-white px-10 lg:px-16 py-4 lg:py-6 rounded-full font-bold uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-white hover:text-navy transition-all transform hover:scale-105 w-full sm:w-auto shadow-xl"
+              onClick={() => onNavigate('about')}
+              className="bg-white/10 backdrop-blur-md border-2 border-white/30 text-white px-10 lg:px-20 py-4 lg:py-6 rounded-full font-bold uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-white hover:text-navy transition-all transform hover:scale-105 w-full sm:w-auto shadow-xl"
             >
-              Request Prayer
+              Our Story
             </button>
           </div>
         </div>
